@@ -1,0 +1,6 @@
+artifacts:
+
+full_dataset:
+  type: pandas.DataFrame
+  description: "Dataset original para AP"
+  constructor: generate_dataset # Referencia a una Task
