@@ -1,4 +1,36 @@
 tasks:
+  # I don't understand this value
+  def_version: 0.0.1
 
-generate_dataset:
-asd:
+  # Task name
+  generate_dataset:
+    # Semantic type
+    type: fda.etl
+
+    execution:
+      context: python-3.7-mini
+      command: etl/etl.py
+
+    outputs:
+      full_dataset:
+        type: Artifact
+      recidivist_dataset:
+        type: Artifact
+      etl_report:
+        type: Artifact
+
+    inputs:
+      site_id:
+        type: str
+      date_from:
+        type: datetime.datetime
+      date_to:
+        type: datetime.datetime
+      split_date:
+        type: datetime.datetime
+      auto_per:
+        type: float
+      clean_per:
+        type: float
+      random_per:
+        type: float

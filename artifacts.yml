@@ -2,5 +2,13 @@ artifacts:
 
 full_dataset:
   type: pandas.DataFrame
-  description: "Dataset original para AP"
-  constructor: generate_dataset # Referencia a una Task
+  description: "It includes test and validation dataset"
+  constructor: generate_dataset # This is a task
+
+recidivist_dataset:
+  type: pickle
+  description: "It includes all sellers have been recidivist for any AP policy"
+
+etl_report:
+  type: html
+  description: "ETL Report with some metrics"
