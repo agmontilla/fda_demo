@@ -34,3 +34,26 @@ tasks:
         type: float
       random_per:
         type: float
+
+  generate_model:
+    type: fda.training
+
+    execution:
+      context: python-3.7-mini
+      command: training/train.py
+
+    outputs:
+      ap_model:
+        type: Artifact
+
+    input:
+      full_dataset:
+        type: Artifact
+      site_id:
+        type: str
+      split_date:
+        type: datetime.datetime
+      run_pv:
+        type: boolean
+      email_to:
+        type: email
