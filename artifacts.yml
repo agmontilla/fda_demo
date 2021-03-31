@@ -1,5 +1,8 @@
 artifacts:
 
+# --------------------
+# ETL artifacts
+# --------------------
 full_dataset:
   type: pandas.DataFrame
   description: "It includes test and validation dataset"
@@ -13,7 +16,15 @@ etl_report:
   type: html
   description: "ETL Report with some metrics"
 
+# --------------------
+# Train artifacts
+# --------------------
 ap_model:
   type: fda.Model
   description: "AP model"
+  constructor: generate_model
+
+volumen_performance_report:
+  type: html
+  description: "Volumen & Performance report given prod and rc model"
   constructor: generate_model

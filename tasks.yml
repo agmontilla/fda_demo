@@ -45,6 +45,8 @@ tasks:
     outputs:
       ap_model:
         type: Artifact
+      volumen_performance_report:
+        type: Artifact
 
     input:
       full_dataset:
